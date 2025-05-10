@@ -1,0 +1,93 @@
+body {
+  background: #ffb6c1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: center;
+  margin: 100px auto;
+  border: 10px solid transparent;
+  background-image: url('Flower_Border.png.jpg'); /* make sure this exists */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.message {
+  white-space: pre-wrap;
+  font-size: 20px;
+  color: #333;
+  font-family: 'Dancing Script', cursive;
+  line-height: 1.6;
+  position: relative;
+  margin-top: 20px;
+}
+
+.message::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+  position: absolute;
+  right: -10px;
+  color: #e91e63;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  color: #888;
+}
+
+.reveal-btn {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reveal-btn:hover {
+  background: #d81b60;
+}
+
+/* ❤️ Heart Rain */
+.heart {
+  position: fixed;
+  top: -30px;
+  color: #ff4d6d;
+  animation: fall linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
